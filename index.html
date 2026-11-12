@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tipio: Tip Tracker App &amp; Server Tip Log for iPhone</title>
+<meta name="description" content="Log tips and hours in seconds and see your real hourly pay. A private server tip log with a pay stub check and No Tax on Tips totals. Free.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tipio: Tip Tracker App &amp; Server Tip Log for iPhone">
+<meta property="og:description" content="Log tips and hours in seconds and see your real hourly pay. A private server tip log with a pay stub check and No Tax on Tips totals. Free.">
+<meta name="theme-color" content="#F6F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/Geist-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tipio","operatingSystem":"iOS","applicationCategory":"FinanceApplication",
+ "description":"Log tips and hours in seconds and see your real hourly pay. A private server tip log with a pay stub check and No Tax on Tips totals.",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Is Tipio free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Logging, the shift timer, 2 jobs, the calendar, the month-end forecast, the pay stub check and the monthly tip report are free, with one small ad. Pro is $12.99 a year (the first 7 days free), $1.99 a month or $29.99 once."}},
+ {"@type":"Question","name":"Does Tipio do my taxes?","acceptedAnswer":{"@type":"Answer","text":"No. It keeps a record of what you enter and adds it up. It doesn't file anything or give tax advice; your W-2 and a tax professional have the final word."}},
+ {"@type":"Question","name":"Do my tips count for No Tax on Tips?","acceptedAnswer":{"@type":"Answer","text":"Tips customers choose to give, in a job on the IRS list of tipped occupations, usually do: up to $25,000 per return for 2025–2028, less above $150,000 of income ($300,000 joint). Automatic gratuities and service charges don't. Check IRS.gov for your case."}},
+ {"@type":"Question","name":"Where are my tips stored?","acceptedAnswer":{"@type":"Answer","text":"On your iPhone, in your normal iPhone and iCloud backups, in any folder you pick for the daily copy and, with Pro, in your own private iCloud. Signing in is optional, and your shifts never go to a server either way."}},
+ {"@type":"Question","name":"Can I bring my history from another app?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export a CSV from your old tip app or spreadsheet and import it in Settings. You see a preview first, and duplicates are skipped."}},
+ {"@type":"Question","name":"I deliver or do gig work. Does it fit?","acceptedAnswer":{"@type":"Answer","text":"You can log tips and other pay (fares, fees, commission) for each job. Mileage isn't tracked."}}
+]}
+</script>
+</head><body class="lp">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M17 8l5 5M22 8l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2ZM11 18h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-offline" viewBox="0 0 24 24"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.8M19 13a10 10 0 0 0-2-1.5M12 20h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="lp-top wrap">
+  <a class="lp-brand" href="./"><img src="icon.png" alt="" width="36" height="36"><span>Tipio</span></a>
+  <nav class="lp-nav" aria-label="Sections">
+    <a href="#features">Features</a><a href="#how">How it works</a><a href="#timer">Shift timer</a><a href="#taxes">Tax season</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+  </nav>
+  <span class="store sm"><small>Coming soon on the</small><b>App Store</b></span>
+  <details class="lp-menu">
+    <summary aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+    <nav aria-label="Sections">
+      <a href="#features">Features</a><a href="#how">How it works</a><a href="#timer">Shift timer</a><a href="#taxes">Tax season</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="support.html">Support</a>
+    </nav>
+  </details>
+</header>
+
+<main id="main">
+<section class="lp-hero wrap">
+  <div>
+    <h1 class="eyebrow">Tip tracker app for servers and bartenders</h1>
+    <p class="display">Know what you really make.</p>
+    <p class="copy">Log tonight’s tips in seconds. Tipio turns card tips, cash tips, tip-out and base pay into one number: your real hourly pay.</p>
+    <div class="cta"><span class="store lg"><small>Coming soon on the</small><b>App Store</b></span><p>Free to start<br>Pro $12.99 a year, first week free</p></div>
+    <ul class="chips">
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-user"/></svg>No account needed</li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg>Shifts stay on your iPhone</li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-offline"/></svg>Works offline</li>
+    </ul>
+  </div>
+  <div class="hero-art">
+    <div class="phone cut lift"><div class="screen"><picture><source srcset="shots/calendar-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/calendar-light.jpg" width="552" height="1200" alt="Tipio’s month calendar: what each day of October paid, colored great, typical or slow, with $4,291 earned at $32.26 an hour."></picture></div></div>
+    <div class="receipt" role="group" aria-label="Example shift">
+      <div class="body">
+        <p class="eyebrow">Fri · dinner · 5:00 – 11:30 PM</p>
+        <ul class="lines">
+          <li><span>Card tips</span><i></i><span>164.00</span></li>
+          <li><span>Cash tips</span><i></i><span>58.00</span></li>
+          <li><span>Tip-out, 10%</span><i></i><span>−22.20</span></li>
+          <li><span>Base 6.5 h × $2.13</span><i></i><span>13.85</span></li>
+        </ul>
+        <div class="total"><span>You made</span><b>$213<small>.65</small></b></div>
+        <div class="rate"><span>Real hourly pay</span><b>$32.87/h</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="wrap">
+  <p class="eyebrow pos">Free, from your first shift</p>
+  <h2>Three answers every server wants after a shift.</h2>
+  <div class="cards">
+    <article class="fcard">
+      <p class="eyebrow hot">What did I really make an hour?</p>
+      <h3>Your real hourly pay</h3>
+      <p>Tips you kept, plus base pay and auto-gratuity, divided by your hours. For the week, the month and every shift.</p>
+      <div class="grow"></div>
+      <div class="phone cut"><div class="screen"><picture><source srcset="shots/shifts-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/shifts-light.jpg" width="552" height="1200" loading="lazy" alt="The Shifts tab: $1,027.73 this week at $30.23 an hour over 34 hours."></picture></div></div>
+    </article>
+    <article class="fcard">
+      <p class="eyebrow hot">Does my paycheck match my tips?</p>
+      <h3>Pay stub check</h3>
+      <p>What each pay period should show on your stub: hours, base pay and card tips. Weekly, every 2 weeks, twice a month or monthly.</p>
+      <div class="grow"></div>
+      <div class="phone cut"><div class="screen"><picture><source srcset="shots/pay-stub-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/pay-stub-light.jpg" width="552" height="1200" loading="lazy" alt="Pay stub check: base pay, card tips and auto-gratuity for the last pay period, with the expected gross pay."></picture></div></div>
+    </article>
+    <article class="fcard">
+      <p class="eyebrow hot">Am I ready for tax time?</p>
+      <h3>No Tax on Tips helper</h3>
+      <p>Tips you kept this year, apart from auto-gratuities, toward the $25,000 deduction cap. Plus each job’s monthly tip report, due by the 10th.</p>
+      <div class="grow"></div>
+      <div class="phone cut"><div class="screen"><picture><source srcset="shots/taxes-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/taxes-light.jpg" width="552" height="1200" loading="lazy" alt="The Taxes tab: tips kept in 2026 split into card, cash and tipped out, and each job’s September tip report."></picture></div></div>
+    </article>
+  </div>
+</section>
+
+<section id="how" class="wrap split">
+  <div>
+    <p class="eyebrow">How it works</p>
+    <h2>A few taps after every shift.</h2>
+    <ol class="steps">
+      <li><span class="n">01</span><div><h3>Add your job</h3><p>Role, base pay, your usual tip-out and your pay schedule. Two jobs are free.</p></div></li>
+      <li><span class="n">02</span><div><h3>Log after each shift</h3><p>Card tips, cash tips and hours, or start the shift timer when you clock in. Your tip-out fills itself in, and a reminder comes only on days you haven’t logged.</p></div></li>
+      <li><span class="n">03</span><div><h3>See where you stand</h3><p>Your real hourly pay, a month calendar, a month-end forecast and your totals for tax time.</p></div></li>
+    </ol>
+  </div>
+  <div class="phones">
+    <div class="phone lift"><div class="screen"><picture><source srcset="shots/log-shift-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/log-shift-light.jpg" width="552" height="1200" loading="lazy" alt="New shift: card tips $212.50, cash tips $64, tip-out filled in at 10%, 7:00 PM to 1:30 AM, $281.35 at $43.28 an hour."></picture></div></div>
+    <div class="phone small lift alt"><div class="screen"><picture><source srcset="shots/widgets-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/widgets-light.jpg" width="552" height="1200" loading="lazy" alt="Tipio widgets on the Lock Screen and Home Screen: this week’s pay and a Log shift button."></picture></div></div>
+  </div>
+</section>
+
+<section id="timer" class="wrap">
+  <div class="timer">
+    <div>
+      <p class="eyebrow pos">Shift timer · free</p>
+      <h2>Clock in with one tap. Log when you clock out.</h2>
+      <p class="copy">Start a timer when your shift starts. It runs on your Lock Screen, in the Dynamic Island and in a bar above the tabs, on every tab. End it and the log opens with the job and times filled in: just add your tips.</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>On your Lock Screen and in the Dynamic Island</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>A timer bar on every tab of the app</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Breaks aren’t counted as time worked</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>End &amp; log tips: job, start and end time filled in</span></li>
+      </ul>
+    </div>
+    <div class="phones">
+      <div class="phone cut"><div class="screen"><picture><source srcset="shots/timer-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/timer-light.jpg" width="552" height="1200" loading="lazy" alt="The Shifts tab with a running shift timer at Harbor Grill: 1:42 hours, started 8:57 AM, with End &amp; log tips and Break buttons."></picture></div></div>
+      <div class="phone cut alt"><div class="screen"><picture><source srcset="shots/lock-screen-dark.jpg" media="(prefers-color-scheme: dark)"><img src="shots/lock-screen-light.jpg" width="552" height="1200" loading="lazy" alt="The shift timer on the iPhone Lock Screen: 1:42:50 at The Copper Room, with End &amp; log tips and Break."></picture></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap also">
+  <h3>Also free</h3>
+  <div class="grid4">
+    <div><b>Month calendar</b><span>What each day paid, and your hourly rate.</span></div>
+    <div><b>Month-end forecast</b><span>From your own last 90 days.</span></div>
+    <div><b>State rules</b><span>What your state does with the tip deduction.</span></div>
+    <div><b>Widgets</b><span>This week’s pay on your Home and Lock Screen.</span></div>
+    <div><b>Reminders</b><span>Only on days you haven’t logged.</span></div>
+    <div><b>Import and export</b><span>CSV in from other tip apps, CSV out anytime.</span></div>
+    <div><b>Automatic backup</b><span>A daily copy to a folder you pick, like iCloud Drive.</span></div>
+    <div><b>2 jobs</b><span>A main job and a side gig, each with its own tip-out.</span></div>
+  </div>
+</section>
+
+<section id="taxes" class="band">
+  <div class="wrap inner">
+    <div>
+      <p class="eyebrow">Tax season · returns due April 15</p>
+      <h2>No Tax on Tips? Keep the record that backs it up.</h2>
+      <p class="copy">From 2025 to 2028, tipped workers can deduct up to $25,000 of qualified tips from federal income tax. Tipio keeps the tips you kept apart from automatic gratuities, and adds them up for the year.</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Tips you kept, per year and per job</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Auto-gratuities and service charges kept apart, since they don’t qualify</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Each employer’s monthly tip report, with a reminder before the 10th</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Pro: a tax-year tip report, PDF and spreadsheet, for whoever does your taxes</span></li>
+      </ul>
+      <p class="fine">Estimates from your own entries, for personal record-keeping. Not tax advice: Tipio doesn’t file anything. Social Security and Medicare tax still apply, and state rules vary. Not affiliated with or endorsed by the IRS.</p>
+    </div>
+    <div class="receipt" role="group" aria-label="Example tax-year total">
+      <div class="body">
+        <p class="eyebrow">Tips you kept in 2026</p>
+        <p class="big">$18,240<small>.55</small></p>
+        <div class="bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <ul class="lines">
+          <li><span>Card</span><i></i><span>14,980.20</span></li>
+          <li><span>Cash</span><i></i><span>4,912.35</span></li>
+          <li><span>Tipped out</span><i></i><span>−1,652.00</span></li>
+          <li class="apart"><span>Auto-gratuity, kept apart</span><i></i><span>1,286.40</span></li>
+        </ul>
+        <div class="cap"><span>$25,000 deduction cap</span><span class="pill">$6,759 to go</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="eyebrow">Private by design</p>
+  <h2>Your shifts stay on your iPhone.</h2>
+  <div class="three">
+    <div><h3>Sign-in is optional</h3><p>You never need an account. Open the app and log. Sign in with Apple or Google only if you want to.</p></div>
+    <div><h3>No server to lose</h3><p>Your shifts never go to a server, even if you sign in, so there’s nothing for us to leak, sell or lose.</p></div>
+    <div><h3>Backups you own</h3><p>A daily copy in a folder you pick, like iCloud Drive, free. With Pro, iCloud backup brings everything back on a new iPhone.</p></div>
+  </div>
+  <p class="adnote">The free version shows one small Google ad at the end of your shifts list; Google’s ad software collects some device data to show it (see the <a href="privacy.html">privacy policy</a>). Pro has no ads.</p>
+</section>
+
+<section id="pricing" class="wrap">
+  <p class="eyebrow">Pricing</p>
+  <h2>Free for everyday logging. Pro for the full picture.</h2>
+  <div class="plans">
+    <div class="plan">
+      <p class="eyebrow">Free</p>
+      <p class="price">$0</p>
+      <p class="sub">With one small ad at the end of your shifts list</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Unlimited shifts for 2 jobs</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Shift timer on your Lock Screen and in the Dynamic Island</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Real hourly pay, calendar and month-end forecast</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Pay stub check</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Monthly tip report and your No Tax on Tips total</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Widgets, reminders, CSV export and automatic backup</span></li>
+      </ul>
+      <span class="store"><small>Coming soon on the</small><b>App Store</b></span>
+    </div>
+    <div class="plan pro">
+      <div class="head"><p class="eyebrow">Tipio Pro</p><span class="pill">7 days free</span></div>
+      <p class="price">$12.99<small> a year</small></p>
+      <p class="sub">Or $1.99 a month, or $29.99 once</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Everything in Free, with no ads</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Insights: best days, hourly pay by week, day vs night</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Forecast extras: likely range and what one more shift adds</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Tax-year tip report (PDF and spreadsheet) for your preparer</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>iCloud backup to a new iPhone</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span>Unlimited jobs and goals</span></li>
+      </ul>
+      <p class="fine">The free week comes with the annual plan. Cancel anytime in Settings › your name › Subscriptions. If notifications are on, Tipio reminds you 3 days before the trial ends.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="wrap faq">
+  <div class="faq-side">
+    <p class="eyebrow">FAQ</p>
+    <h2>Questions servers ask</h2>
+    <p class="desk">Anything else? <a href="support.html">Support</a> answers within two working days.</p>
+  </div>
+  <div class="faq-list">
+    <div>
+      <div><h3>Is Tipio free?</h3><p>Yes. Logging, the shift timer, 2 jobs, the calendar, the month-end forecast, the pay stub check and the monthly tip report are free, with one small ad. Pro is $12.99 a year (the first 7 days free), $1.99 a month or $29.99 once.</p></div>
+      <div><h3>Does Tipio do my taxes?</h3><p>No. It keeps a record of what you enter and adds it up. It doesn’t file anything or give tax advice; your W-2 and a tax professional have the final word.</p></div>
+      <div><h3>Do my tips count for No Tax on Tips?</h3><p>Tips customers choose to give, in a job on the IRS list of tipped occupations, usually do: up to $25,000 per return for 2025–2028, less above $150,000 of income ($300,000 joint). Automatic gratuities and service charges don’t. Check IRS.gov for your case.</p></div>
+    </div>
+    <div>
+      <div><h3>Where are my tips stored?</h3><p>On your iPhone, in your normal iPhone and iCloud backups, in any folder you pick for the daily copy and, with Pro, in your own private iCloud. Signing in is optional, and your shifts never go to a server either way.</p></div>
+      <div><h3>Can I bring my history from another app?</h3><p>Yes. Export a CSV from your old tip app or spreadsheet and import it in Settings. You see a preview first, and duplicates are skipped.</p></div>
+      <div><h3>I deliver or do gig work. Does it fit?</h3><p>You can log tips and other pay (fares, fees, commission) for each job. Mileage isn’t tracked.</p></div>
+    </div>
+  </div>
+  <p class="faq-more">Anything else? <a href="support.html">Support</a> answers within two working days.</p>
+</section>
+
+<section class="wrap end">
+  <img src="icon.png" alt="" width="104" height="104">
+  <p class="big2">Start tonight’s shift log.</p>
+  <p class="copy">Free on iPhone. No account needed.</p>
+  <span class="store lg"><small>Coming soon on the</small><b>App Store</b></span>
+</section>
+</main>
+
+<footer class="lp-foot wrap">
+  <div>
+    <a class="lp-brand" href="./"><img src="icon.png" alt="" width="28" height="28"><span>Tipio</span></a>
+    <p>© 2026 Victor Kurilo Potrebko · Tipio is for personal record-keeping. Not affiliated with or endorsed by the IRS.</p>
+  </div>
+  <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></nav>
+</footer>
+<script>
+// Close the phone menu after picking a section.
+document.querySelectorAll('.lp-menu nav a').forEach(a => a.addEventListener('click', () => a.closest('details').open = false));
+</script>
+</body></html>
